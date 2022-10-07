@@ -1,8 +1,9 @@
 ---
-- hosts: all
+- hosts: web
   become: true
   vars_files:
     - vars/default.yml
+    - ~/ansible/vars.yml
 
   tasks:
     - name: Install Prerequisites
