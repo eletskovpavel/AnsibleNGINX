@@ -34,7 +34,8 @@
       notify: Reload Nginx
 
 # MySQL Configuration
-    - name: Sets the root password 
+    - name: Sets the root password
+      ignore_errors: yes # for idempotence
       mysql_user: 
         name: root 
         password: "{{ mysql_root_password }}"
